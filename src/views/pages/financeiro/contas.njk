@@ -1,0 +1,31 @@
+<section>
+  <header class="mb-4">
+    <h1 class="h3 mb-1">Contas a pagar</h1>
+    <p class="text-secondary mb-0">Dívidas do mês. Lançamento ainda não está ligado.</p>
+  </header>
+
+  <div class="table-responsive">
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th scope="col">Descrição</th>
+          <th scope="col">Vencimento</th>
+          <th scope="col">Status</th>
+          <th scope="col" class="text-end">Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for conta in financeiro.contas %}
+          <tr id="{{ conta.id }}">
+            <td>{{ conta.descricao }}</td>
+            <td>{{ conta.vencimento }}</td>
+            <td>
+              <span class="badge text-bg-secondary">{{ conta.status }}</span>
+            </td>
+            <td class="text-end">{{ conta.valor }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

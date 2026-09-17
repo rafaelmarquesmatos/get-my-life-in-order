@@ -1,0 +1,20 @@
+<nav id="feature-rail" class="flex-shrink-0 border-end d-flex flex-column p-3" {% if oob %}hx-swap-oob="true"{% endif %}>
+  <p class="text-secondary text-uppercase small mb-3">Áreas</p>
+  <div class="list-group list-group-flush">
+    {% for feature in features %}
+      {% if feature.enabled %}
+        <a
+          href="{{ feature.href }}"
+          class="list-group-item list-group-item-action{% if feature.id == activeFeature %} active{% endif %}"
+          {% if feature.id == activeFeature %}aria-current="page"{% endif %}
+          hx-get="{{ feature.href }}"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          hx-push-url="true"
+        >{{ feature.label }}</a>
+      {% else %}
+        <span class="list-group-item disabled">{{ feature.label }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>

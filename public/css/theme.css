@@ -1,0 +1,83 @@
+/*
+  Theme token layer only.
+
+  Approved exception in DESIGN.md: this file assigns CSS custom properties
+  that map onto Bootstrap 5 variables. It does not introduce presentational
+  class names. Swap these values to recolor the whole application.
+*/
+
+:root,
+[data-bs-theme="dark"] {
+  --bs-body-bg: #141414;
+  --bs-body-color: #e4e4e4;
+  --bs-body-bg-rgb: 20, 20, 20;
+  --bs-body-color-rgb: 228, 228, 228;
+  --bs-emphasis-color: #f1f1f1;
+  --bs-emphasis-color-rgb: 241, 241, 241;
+  --bs-secondary-color: #a8a8a8;
+  --bs-secondary-color-rgb: 168, 168, 168;
+  --bs-secondary-bg: #1c1c1c;
+  --bs-secondary-bg-rgb: 28, 28, 28;
+  --bs-tertiary-bg: #222222;
+  --bs-tertiary-bg-rgb: 34, 34, 34;
+  --bs-tertiary-color: #b5b5b5;
+  --bs-tertiary-color-rgb: 181, 181, 181;
+  --bs-border-color: #2e2e2e;
+  --bs-border-color-translucent: #2e2e2e;
+  --bs-link-color: #d6d6d6;
+  --bs-link-color-rgb: 214, 214, 214;
+  --bs-link-hover-color: #f1f1f1;
+  --bs-link-hover-color-rgb: 241, 241, 241;
+  --bs-focus-ring-color: rgba(214, 214, 214, 0.35);
+
+  --bs-primary: #cfcfcf;
+  --bs-primary-rgb: 207, 207, 207;
+  --bs-primary-text-emphasis: #f1f1f1;
+  --bs-primary-bg-subtle: #1c1c1c;
+  --bs-primary-border-subtle: #3a3a3a;
+
+  --bs-secondary: #8f8f8f;
+  --bs-secondary-rgb: 143, 143, 143;
+
+  --bs-light: #e4e4e4;
+  --bs-light-rgb: 228, 228, 228;
+  --bs-dark: #141414;
+  --bs-dark-rgb: 20, 20, 20;
+
+  --bs-box-shadow: none;
+  --bs-box-shadow-sm: none;
+  --bs-box-shadow-lg: none;
+  --bs-box-shadow-inset: none;
+  --bs-card-box-shadow: none;
+  --bs-btn-box-shadow: none;
+  --bs-btn-focus-box-shadow: none;
+  --bs-form-control-focus-box-shadow: none;
+
+  --bs-list-group-active-color: #f1f1f1;
+  --bs-list-group-active-bg: #2a2a2a;
+  --bs-list-group-active-border-color: #3a3a3a;
+
+  --bs-body-font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/*
+  Bootstrap defines list-group active colors on .list-group itself,
+  which would otherwise ignore the :root primary remap. Reassign the
+  same tokens so the active item stays in the monochrome scale.
+*/
+.list-group {
+  --bs-list-group-active-color: #f1f1f1;
+  --bs-list-group-active-bg: #2a2a2a;
+  --bs-list-group-active-border-color: #3a3a3a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
