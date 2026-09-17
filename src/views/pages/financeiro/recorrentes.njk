@@ -1,0 +1,27 @@
+<section>
+  <header class="mb-4">
+    <h1 class="h3 mb-1">Recorrentes</h1>
+    <p class="text-secondary mb-0">Dívidas que se repetem todo mês. Lançamento ainda não está ligado.</p>
+  </header>
+
+  <div class="table-responsive">
+    <table class="table align-middle">
+      <thead>
+        <tr>
+          <th scope="col">Descrição</th>
+          <th scope="col">Dia do mês</th>
+          <th scope="col" class="text-end">Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in financeiro.recorrentes %}
+          <tr id="{{ item.id }}">
+            <td>{{ item.descricao }}</td>
+            <td>Dia {{ item.dia }}</td>
+            <td class="text-end">{{ item.valor }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

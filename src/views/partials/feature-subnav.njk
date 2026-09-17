@@ -1,0 +1,16 @@
+<nav id="feature-subnav" class="flex-shrink-0 border-end d-flex flex-column p-3" {% if oob %}hx-swap-oob="true"{% endif %}>
+  <p class="text-secondary text-uppercase small mb-3">Financeiro</p>
+  <div class="list-group list-group-flush">
+    {% for item in subnav %}
+      <a
+        href="{{ item.href }}"
+        class="list-group-item list-group-item-action{% if item.id == activeSubfeature %} active{% endif %}"
+        {% if item.id == activeSubfeature %}aria-current="page"{% endif %}
+        hx-get="{{ item.href }}"
+        hx-target="#main-content"
+        hx-swap="innerHTML"
+        hx-push-url="true"
+      >{{ item.label }}</a>
+    {% endfor %}
+  </div>
+</nav>

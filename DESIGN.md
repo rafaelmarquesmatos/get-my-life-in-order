@@ -85,7 +85,13 @@ Reject or retune any token that fails those checks. Prefer slightly less contras
 
 ---
 
-## 5. Relationship to AGENT.md
+## 5. Structure and contracts
+
+The three-region shell, URL shape, HTMX swap targets, and template split are defined in [DESIGN_CONTRACTS.md](DESIGN_CONTRACTS.md). Follow that document whenever you add a feature, a sidebar item, or a page. Do not invent a parallel chrome.
+
+---
+
+## 6. Relationship to AGENT.md
 
 [AGENT.md](AGENT.md) still governs architecture, HTMX, and Bootstrap usage. Design does not override those rules.
 

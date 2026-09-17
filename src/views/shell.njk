@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ pageTitle }} · get-my-life-in-order</title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <script src="/vendor/htmx/htmx.min.js" defer></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  </head>
+  <body class="vh-100">
+    <div class="d-flex vh-100">
+      {% include "partials/feature-rail.njk" %}
+      {% include "partials/feature-subnav.njk" %}
+      <main id="main-content" class="flex-grow-1 overflow-auto p-4">
+        {% include contentTemplate %}
+      </main>
+    </div>
+  </body>
+</html>

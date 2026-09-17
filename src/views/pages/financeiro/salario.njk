@@ -1,0 +1,31 @@
+<section>
+  <header class="mb-4">
+    <h1 class="h3 mb-1">Salário</h1>
+    <p class="text-secondary mb-0">Informe o salário do mês. O envio ainda não está ligado.</p>
+  </header>
+
+  <form class="col-12 col-lg-6">
+    <div class="mb-3">
+      <label for="competencia" class="form-label">Competência</label>
+      <input
+        id="competencia"
+        name="competencia"
+        type="month"
+        class="form-control"
+        value="{{ financeiro.salario.competencia }}"
+      >
+    </div>
+    <div class="mb-3">
+      <label for="salario" class="form-label">Valor</label>
+      <input
+        id="salario"
+        name="salario"
+        type="text"
+        class="form-control"
+        value="{{ financeiro.salario.valor }}"
+        inputmode="decimal"
+      >
+    </div>
+    <button type="button" class="btn btn-secondary" disabled>Salvar (em breve)</button>
+  </form>
+</section>

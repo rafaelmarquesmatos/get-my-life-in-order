@@ -1,0 +1,33 @@
+<section>
+  <header class="mb-4">
+    <h1 class="h3 mb-1">Dashboard</h1>
+    <p class="text-secondary mb-0">{{ financeiro.monthLabel }}</p>
+  </header>
+
+  <div class="row g-3">
+    <div class="col-12 col-md-4">
+      <article class="card h-100">
+        <div class="card-body">
+          <p class="text-secondary small mb-2">Salário do mês</p>
+          <p class="fs-4 mb-0">{{ financeiro.totais.salario }}</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-4">
+      <article class="card h-100">
+        <div class="card-body">
+          <p class="text-secondary small mb-2">Dívidas do mês</p>
+          <p class="fs-4 mb-0">{{ financeiro.totais.dividas }}</p>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-4">
+      <article class="card h-100">
+        <div class="card-body">
+          <p class="text-secondary small mb-2">Saldo</p>
+          <p class="fs-4 mb-0">{{ financeiro.totais.saldo }}</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
